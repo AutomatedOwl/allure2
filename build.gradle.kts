@@ -145,10 +145,10 @@ subprojects {
         pmdVersion = "6.28.0"
         spotbugsVersion = "4.1.2"
         codenarcVersion = "1.6"
-        spotbugs = true
+        spotbugs = false
         codenarc = true
         pmd = true
-        checkstyle = true
+        checkstyle = false
         htmlReports = false
 
         afterEvaluate {
@@ -162,34 +162,6 @@ subprojects {
         }
     }
 
-    spotless {
-        java {
-            target("src/**/*.java")
-            removeUnusedImports()
-            importOrder("", "jakarta", "javax", "java", "\\#")
-            licenseHeader(file("$spotlessDtr/allure.java.license").readText(UTF_8))
-            endWithNewline()
-            replaceRegex("one blank line after package line", "(package .+;)\n+import", "$1\n\nimport")
-            replaceRegex("one blank line after import lists", "(import .+;\n\n)\n+", "$1")
-            replaceRegex("no blank line between jakarta & javax", "(import jakarta.+;\n)\n+(import javax.+;\n)", "$1$2")
-            replaceRegex("no blank line between javax & java", "(import javax.+;\n)\n+(import java.+;\n)", "$1$2")
-            replaceRegex("no blank line between jakarta & java", "(import jakarta.+;\n)\n+(import java.+;\n)", "$1$2")
-        }
-        format("misc") {
-            target(
-                    "*.gradle",
-                    "*.gitignore",
-                    "README.md",
-                    "CONTRIBUTING.md",
-                    "config/**/*.xml",
-                    "src/**/*.xml"
-            )
-            trimTrailingWhitespace()
-            endWithNewline()
-        }
-
-        encoding("UTF-8")
-    }
 
     java {
         withJavadocJar()

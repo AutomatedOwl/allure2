@@ -16,8 +16,8 @@ function byDuration(a, b) {
 }
 
 function byMaxDuration(a, b) {
-  if (a.time && a.time.maxDuration && b.time && b.time.maxDuration) {
-    return a.time.maxDuration < b.time.maxDuration ? -1 : 1;
+  if (a.time && a.time.sumDuration && b.time && b.time.sumDuration) {
+    return a.time.sumDuration < b.time.sumDuration ? -1 : 1;
   }
   return 1;
 }
