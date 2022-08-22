@@ -27,7 +27,7 @@
       "name": "Categorieën"
     },
     "suites": {
-      "name": "Suites"
+      "name": "Topologies"
     },
     "graph": {
       "name": "Grafieken"
@@ -73,7 +73,7 @@
       "showAll": "Toon alles"
     },
     "suites": {
-      "name": "Suites"
+      "name": "Topologies"
     },
     "categories": {
       "name": "Categorieën"

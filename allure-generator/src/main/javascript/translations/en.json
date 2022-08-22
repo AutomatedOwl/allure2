@@ -24,10 +24,10 @@
       "name": "Overview"
     },
     "categories": {
-      "name": "Categories"
+      "name": "Test Defects"
     },
     "suites": {
-      "name": "Suites"
+      "name": "Topologies"
     },
     "graph": {
       "name": "Graphs"
@@ -73,10 +73,10 @@
       "showAll": "Show all"
     },
     "suites": {
-      "name": "Suites"
+      "name": "Topologies"
     },
     "categories": {
-      "name": "Categories"
+      "name": "Test Defects"
     }
   },
   "chart": {
@@ -103,7 +103,7 @@
       "name": "Overview"
     },
     "categories": {
-      "name": "Categories"
+      "name": "Test Defects"
     },
     "description": {
       "name": "Description"

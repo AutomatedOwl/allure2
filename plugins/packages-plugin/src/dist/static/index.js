@@ -3,7 +3,7 @@
 allure.api.addTranslation('en', {
     tab: {
         packages: {
-            name: 'Packages'
+            name: 'Test Files'
         }
     }
 });
@@ -35,7 +35,7 @@ allure.api.addTranslation('de', {
 allure.api.addTranslation('nl', {
     tab: {
         packages: {
-            name: 'Packages'
+            name: 'Test Files'
         }
     }
 });

@@ -3,7 +3,7 @@
 allure.api.addTranslation('en', {
     tab: {
         behaviors: {
-            name: 'Behaviors'
+            name: 'Test Classes'
         }
     },
     widget: {
