@@ -74,6 +74,10 @@ public class CsvExportSuite implements Serializable {
     @CsvBindByPosition(position = 10)
     private final String description;
 
+    @CsvBindByName(column = "Status Message")
+    @CsvBindByPosition(position = 11)
+    private final String statusMessage;
+
     public CsvExportSuite(final TestResult result) {
         final Map<String, String> resultMap = result.toMap();
         this.status = result.getStatus() != null ? result.getStatus().value() : null;
@@ -87,6 +91,7 @@ public class CsvExportSuite implements Serializable {
         this.testMethod = resultMap.getOrDefault("testMethod", null);
         this.name = result.getName();
         this.description = result.getDescription();
+        this.statusMessage = result.getStatusMessage();
     }
 
     public String getStatus() {
@@ -131,5 +136,9 @@ public class CsvExportSuite implements Serializable {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getStatusMessage() {
+        return statusMessage;
     }
 }
